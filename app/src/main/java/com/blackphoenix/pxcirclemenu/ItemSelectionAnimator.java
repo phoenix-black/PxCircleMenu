@@ -23,7 +23,7 @@ class ItemSelectionAnimator {
     private static final int EXIT_ANIMATION_DURATION = 600;
 
     private static final float START_CIRCLE_SIZE_RATIO = 1;
-    static final float END_CIRCLE_SIZE_RATIO = 1.3f;
+    static final float END_CIRCLE_SIZE_RATIO = 1.8f;
 
     private static final int START_CIRCLE_ANGLE = 1;
     private static final int END_CIRCLE_ANGLE = 360;
