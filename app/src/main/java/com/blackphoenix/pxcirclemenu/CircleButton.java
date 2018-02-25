@@ -1,6 +1,7 @@
 package com.blackphoenix.pxcirclemenu;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
@@ -15,6 +16,8 @@ import android.util.StateSet;
 class CircleButton extends AppCompatImageButton {
 
     private int buttonSize;
+    private int buttonHeight;
+    private int buttonWidth;
 
     public CircleButton(Context context) {
         this(context, null);
@@ -22,14 +25,24 @@ class CircleButton extends AppCompatImageButton {
 
     public CircleButton(Context context, AttributeSet attrs) {
         super(context, attrs);
+        init(attrs);
+    }
 
-        buttonSize = (int) getResources().getDimension(R.dimen.circle_menu_button_size);
+    private void init(AttributeSet attrs){
+        TypedArray typedArray = getContext().obtainStyledAttributes(attrs, R.styleable.CircleMenu);
+        try {
+            buttonSize = (int) getResources().getDimension(R.dimen.circle_menu_button_size);
+            buttonWidth = (int) typedArray.getDimension(R.styleable.CircleMenuButton_button_width, getResources().getDimension(R.dimen.circle_menu_button_size));
+            buttonHeight = (int) typedArray.getDimension(R.styleable.CircleMenuButton_button_height, getResources().getDimension(R.dimen.circle_menu_button_size));
+        }finally {
+            typedArray.recycle();
+        }
     }
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        setMeasuredDimension(buttonSize, buttonSize);
+        setMeasuredDimension(buttonWidth, buttonHeight);
     }
 
     StateListDrawable createBackgroundDrawable(int colorNormal, int colorPressed) {
