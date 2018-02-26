@@ -11,6 +11,7 @@ import android.graphics.drawable.shapes.OvalShape;
 import android.os.Build;
 import android.support.v7.widget.AppCompatImageButton;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.StateSet;
 
 class CircleButton extends AppCompatImageButton {
@@ -31,10 +32,13 @@ class CircleButton extends AppCompatImageButton {
     private void init(AttributeSet attrs){
         TypedArray typedArray = getContext().obtainStyledAttributes(attrs, R.styleable.CircleMenu);
         try {
-            buttonSize = (int) getResources().getDimension(R.dimen.circle_menu_button_size);
+          //  buttonSize = (int) getResources().getDimension(R.dimen.circle_menu_button_size);
             buttonWidth = (int) typedArray.getDimension(R.styleable.CircleMenuButton_button_width, getResources().getDimension(R.dimen.circle_menu_button_size));
             buttonHeight = (int) typedArray.getDimension(R.styleable.CircleMenuButton_button_height, getResources().getDimension(R.dimen.circle_menu_button_size));
+            Log.e("CircleButton"," Height: "+buttonHeight+" Width: "+buttonWidth);
+
         }finally {
+            Log.e("CircleButton","Recycling");
             typedArray.recycle();
         }
     }
@@ -42,6 +46,7 @@ class CircleButton extends AppCompatImageButton {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        Log.e("CircleButton","Init Measure "+ widthMeasureSpec + " x " + heightMeasureSpec);
         setMeasuredDimension(buttonWidth, buttonHeight);
     }
 

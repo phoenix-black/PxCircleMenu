@@ -51,6 +51,7 @@ public class CenterMenuButton extends CircleButton {
         AnimatedVectorDrawable menuIcon = (AnimatedVectorDrawable) ContextCompat.getDrawable(getContext(), iconId);
         setImageDrawable(menuIcon);
         menuIcon.start();
+        // ToDo Handle the null pointer exception here
     }
 
     private void startPreLollipopAnimation() {
