@@ -148,6 +148,8 @@ class MenuController {
         float angleStep = 360.0f / buttonsCount;
         float lastAngle = startAngle;
 
+        Log.e("Center Button Position",""+menuCenterX+" , "+menuCenterY);
+
         for (int i = 0; i < buttonsCount; i++) {
             CircleMenuButton button = buttons.get(i);
 
