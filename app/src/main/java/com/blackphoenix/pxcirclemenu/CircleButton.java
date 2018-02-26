@@ -32,10 +32,10 @@ class CircleButton extends AppCompatImageButton {
     private void init(AttributeSet attrs){
         TypedArray typedArray = getContext().obtainStyledAttributes(attrs, R.styleable.CircleMenu);
         try {
-          //  buttonSize = (int) getResources().getDimension(R.dimen.circle_menu_button_size);
-            buttonWidth = (int) typedArray.getDimension(R.styleable.CircleMenuButton_button_width, getResources().getDimension(R.dimen.circle_menu_button_size));
-            buttonHeight = (int) typedArray.getDimension(R.styleable.CircleMenuButton_button_height, getResources().getDimension(R.dimen.circle_menu_button_size));
-            Log.e("CircleButton"," Height: "+buttonHeight+" Width: "+buttonWidth);
+            buttonSize = (int) getResources().getDimension(R.dimen.circle_menu_button_size);
+           /* buttonWidth = (int) typedArray.getDimension(R.styleable.CircleMenuButton_button_width, getResources().getDimension(R.dimen.circle_menu_button_size));
+            buttonHeight = (int) typedArray.getDimension(R.styleable.CircleMenuButton_button_height, getResources().getDimension(R.dimen.circle_menu_button_size));*/
+            Log.e("CircleButton"," Height: "+buttonSize+" Width: "+buttonSize);
 
         }finally {
             Log.e("CircleButton","Recycling");
@@ -46,8 +46,8 @@ class CircleButton extends AppCompatImageButton {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        Log.e("CircleButton","Init Measure "+ widthMeasureSpec + " x " + heightMeasureSpec);
-        setMeasuredDimension(buttonWidth, buttonHeight);
+      //  Log.e("CircleButton","Init Measure "+ widthMeasureSpec + " x " + heightMeasureSpec);
+      //  setMeasuredDimension(buttonWidth, buttonHeight);
     }
 
     StateListDrawable createBackgroundDrawable(int colorNormal, int colorPressed) {
