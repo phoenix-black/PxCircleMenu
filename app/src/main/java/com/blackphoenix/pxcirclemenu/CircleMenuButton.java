@@ -48,7 +48,7 @@ public class CircleMenuButton extends CircleButton {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        Log.e("CircleMenuButton","onMeasure Override - "+widthMeasureSpec + " x " + heightMeasureSpec);
+      //  Log.e("CircleMenuButton","onMeasure Override - "+widthMeasureSpec + " x " + heightMeasureSpec);
         setMeasuredDimension(buttonWidth,buttonHeight);
     }
 
