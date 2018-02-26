@@ -32,6 +32,7 @@ class MenuController {
                    float menuCenterY,
                    final float startAngle,
                    int distance,
+                   int buttonSize,
                    boolean openOnStart,
                    final boolean hintsEnabled) {
         this.buttons = menuButtons;
@@ -41,7 +42,7 @@ class MenuController {
         this.distance = distance;
         this.isOpened = openOnStart;
         this.listener = listener;
-        this.itemSelectionAnimator = new ItemSelectionAnimator(context, this, listener, menuCenterX, menuCenterY, distance);
+        this.itemSelectionAnimator = new ItemSelectionAnimator(context, this, listener, menuCenterX, menuCenterY, distance,buttonSize);
 
         View.OnClickListener onButtonItemClickListener = new View.OnClickListener() {
             @Override

@@ -53,7 +53,8 @@ class ItemSelectionAnimator {
                           MenuControllerListener controllerListener,
                           float menuCenterX,
                           float menuCenterY,
-                          int circleRadius) {
+                          int circleRadius,
+                          int buttonSize) {
         this.menuController = menuController;
         this.controllerListener = controllerListener;
         this.isAnimating = false;
@@ -61,7 +62,7 @@ class ItemSelectionAnimator {
         this.circleAlpha = ALPHA_OPAQUE;
         this.originalCircleRadius = circleRadius;
         this.currentCircleRadius = originalCircleRadius;
-        this.originalCircleStrokeWidth = context.getResources().getDimension(R.dimen.circle_menu_button_size);
+        this.originalCircleStrokeWidth = buttonSize;
         this.menuCenterX = menuCenterX + originalCircleStrokeWidth / 2;
         this.menuCenterY = menuCenterY + originalCircleStrokeWidth / 2;
     }

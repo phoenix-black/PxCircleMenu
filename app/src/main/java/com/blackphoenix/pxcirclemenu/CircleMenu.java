@@ -98,7 +98,7 @@ public class CircleMenu extends FrameLayout implements MenuControllerListener {
         }
 
         menuController = new MenuController(getContext(), buttons, this, centerButton.getX(), centerButton.getY(),
-                circleStartAngle, distance, openOnStart, hintsEnabled);
+                circleStartAngle, distance, buttonSize, openOnStart, hintsEnabled);
     }
 
     @Override
