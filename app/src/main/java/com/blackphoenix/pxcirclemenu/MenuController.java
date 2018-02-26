@@ -5,6 +5,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.graphics.Canvas;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Toast;
@@ -152,6 +153,10 @@ class MenuController {
 
             float x = Math.round((float) (menuCenterX + distance * Math.cos(Math.toRadians(lastAngle))));
             float y = Math.round((float) (menuCenterY + distance * Math.sin(Math.toRadians(lastAngle))));
+
+            Log.e("Button count",""+i);
+            Log.e("Button Position",""+x+" x "+y);
+            Log.e("Button Angle",""+lastAngle);
 
             button.setX(x);
             button.setY(y);

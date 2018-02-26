@@ -35,10 +35,10 @@ class CircleButton extends AppCompatImageButton {
             buttonSize = (int) getResources().getDimension(R.dimen.circle_menu_button_size);
             buttonWidth = (int) typedArray.getDimension(R.styleable.CircleMenuButton_button_width, getResources().getDimension(R.dimen.circle_menu_button_size));
             buttonHeight = (int) typedArray.getDimension(R.styleable.CircleMenuButton_button_height, getResources().getDimension(R.dimen.circle_menu_button_size));
-            Log.e("CircleButton"," Height: "+buttonSize+" Width: "+buttonSize);
+            Log.e("CircleButton"," Height: "+buttonHeight+" Width: "+buttonWidth);
 
         }finally {
-            Log.e("CircleButton","Recycling");
+            /*Log.e("CircleButton","Recycling");*/
             typedArray.recycle();
         }
     }
