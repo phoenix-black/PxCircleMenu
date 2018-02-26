@@ -47,7 +47,7 @@ class CircleButton extends AppCompatImageButton {
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
       //  Log.e("CircleButton","Init Measure "+ widthMeasureSpec + " x " + heightMeasureSpec);
-      //  setMeasuredDimension(buttonWidth, buttonHeight);
+        setMeasuredDimension(buttonWidth, buttonHeight);
     }
 
     StateListDrawable createBackgroundDrawable(int colorNormal, int colorPressed) {
