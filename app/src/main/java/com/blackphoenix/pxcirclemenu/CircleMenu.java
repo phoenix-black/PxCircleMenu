@@ -20,6 +20,7 @@ public class CircleMenu extends FrameLayout implements MenuControllerListener {
     private boolean openOnStart;
     private boolean hintsEnabled;
     private int calculatedSize;
+    private int buttonSize;
 
     private CenterMenuButton centerButton;
     private MenuController menuController;
@@ -47,11 +48,12 @@ public class CircleMenu extends FrameLayout implements MenuControllerListener {
             distance = (int) typedArray.getDimension(R.styleable.CircleMenu_m_distance, getResources().getDimension(R.dimen.circle_menu_distance));
             openOnStart = typedArray.getBoolean(R.styleable.CircleMenu_openOnStart, false);
             hintsEnabled = typedArray.getBoolean(R.styleable.CircleMenu_hintsEnabled, false);
+            buttonSize = (int) typedArray.getDimension(R.styleable.CircleMenu_m_distance, getResources().getDimension(R.dimen.circle_menu_button_size));
         } finally {
             typedArray.recycle();
         }
 
-        float buttonSize = getResources().getDimension(R.dimen.circle_menu_button_size);
+        /*float buttonSize = getResources().getDimension(R.dimen.circle_menu_button_size);*/
         int ringRadius = (int) (buttonSize + (distance - buttonSize / 2));
         calculatedSize = (int) (ringRadius * 2 * ItemSelectionAnimator.END_CIRCLE_SIZE_RATIO);
     }

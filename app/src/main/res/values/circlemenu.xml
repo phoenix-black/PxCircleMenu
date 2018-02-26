@@ -6,6 +6,7 @@
         <attr name="openOnStart" format="boolean"/>
         <attr name="hintsEnabled" format="boolean"/>
         <attr name="m_distance" format="dimension"/>
+        <attr name="button_size" format="dimension"/>
     </declare-styleable>
 
     <declare-styleable name="CircleMenuButton">
