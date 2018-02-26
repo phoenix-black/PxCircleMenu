@@ -34,7 +34,7 @@ public class CircleMenuButton extends CircleButton {
         int iconId = attr.getResourceId(R.styleable.CircleMenuButton_icon, 0);
         attr.recycle();
 
-        Log.e("CircleButton"," Height: "+buttonHeight+" Width: "+buttonWidth);
+        Log.e("CircleMenuButton"," Height: "+buttonHeight+" Width: "+buttonWidth);
 
         setBackgroundCompat(createBackgroundDrawable(colorNormal, colorPressed));
 
